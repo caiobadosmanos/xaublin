@@ -11,12 +11,12 @@ def manter_cu_grosso():
     while True:
         try:
             for url in urls:
-              response = requests.get(url)
+                response = requests.get(url)  # Corrigida a indentação aqui
                 if response.status_code == 200:
-                  print("Requisição bem-sucedida!")
-                  print("Por enquanto tudo certo aqui!, apenas um cara tranquilo")
-              else:
-                  print(f"Falha na requisição. Status code: {response.status_code}")
+                    print("Requisição bem-sucedida!")
+                    print("Por enquanto tudo certo aqui!, apenas um cara tranquilo")
+                else:
+                    print(f"Falha na requisição. Status code: {response.status_code}")
         except Exception as e:
             print(f"Erro na requisição: {e}")
         time.sleep(60)
